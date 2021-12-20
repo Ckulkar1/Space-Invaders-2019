@@ -11,8 +11,13 @@ public class EnemyController : MonoBehaviour
     public float minPosX;
     public float maxPosX;
 
+    // The min and max limits on the Y-axis
+    public float minPosY;
+    public float maxPosY;
+
     // How far to move per one step
-    public float moveDistance;
+    public float moveDistanceX;
+    public float moveDistanceY;
 
     // How much time interval between one motion and the next
     public float timeStep;
@@ -42,14 +47,17 @@ public class EnemyController : MonoBehaviour
             float currentPositionX = gameObject.transform.position.x;
             
             // Calculate the new position the game object is expected to move to
-            float newPositionX = currentPositionX + moveDistance;
+            float newPositionX = currentPositionX + moveDistanceX;
 
             // The current position of the game object along the vertical Y-axis. We don't want to move the object vertically,
             // so we keep the value as is
             float currentPositionY = gameObject.transform.position.y;
 
+            //To move the enemy on the y-axis
+            float newPositionY = currentPositionY - moveDistanceY;
+
             // Combine the X and Y values of the new position together in a new Vector2 variable
-            Vector2 newPosition = new Vector2(newPositionX, currentPositionY);
+            Vector2 newPosition = new Vector2(newPositionX, newPositionY);
 
             /*  Apply the new calculated position to the object's transform to actually make it move on screen
              *  The "position" property in transform is either a Vector2 (2d) or Vector3 (3d) data type, so we need to assign the values
@@ -68,12 +76,16 @@ public class EnemyController : MonoBehaviour
             // The below is just like the above code, but inverted to accomodate for movement in the opposite (left) direction
 
             float currentPositionX = gameObject.transform.position.x;
+            float currentPositionY = gameObject.transform.position.y;
 
             // The new position is calculated by subtracting the moveDistance, since going left means going in decreasing X values
-            float newPositionX = currentPositionX - moveDistance;
+            float newPositionX = currentPositionX - moveDistanceX;
+
+            //The new position on y-axis
+            float newPositionY = currentPositionY - moveDistanceY;
+
             
-            float currentPositionY = gameObject.transform.position.y;
-            Vector2 newPosition = new Vector2(newPositionX, currentPositionY);
+            Vector2 newPosition = new Vector2(newPositionX, newPositionY);
 
             gameObject.transform.position = newPosition;
 
