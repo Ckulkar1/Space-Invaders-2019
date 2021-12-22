@@ -5,13 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Open.unity
     guid: f951de51437924acd8f74cd4fe2a0cfc
   - enabled: 1
-    path: Assets/Scenes/SpaceInvaders.unity
+    path: Assets/Scenes/Selection.unity
+    guid: 7d8323b63cce24c9fa5050d82ffc7d59
+  - enabled: 1
+    path: Assets/Scenes/SpaceInvaders1.unity
     guid: 4ddb475e772d40d47b15c36466e70a08
   - enabled: 1
+    path: Assets/Scenes/SpaceInvaders2.unity
+    guid: e6d243919e2a44573a56386cb4a1aff7
+  - enabled: 0
     path: Assets/Scenes/Restart.unity
     guid: 46155e694586148daab2534bd48c19c2
   m_configObjects: {}

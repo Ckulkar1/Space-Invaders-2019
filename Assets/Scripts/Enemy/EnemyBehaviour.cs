@@ -66,7 +66,7 @@ public class EnemyBehaviour : MonoBehaviour
 
             audio.PlayOneShot(explosion);
 
-            gameManager.GameOver();
+            gameManager.Restart();
 
         }
     }

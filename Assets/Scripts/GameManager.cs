@@ -7,11 +7,19 @@ public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
 
+    public AudioSource audio;
+
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
     public void GameOver()
     {
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
+            audio.Play();
             Debug.Log("Game Over");
             Invoke("Restart",  3f);
         }
@@ -20,6 +28,6 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-      SceneManager.LoadScene(2);
+      SceneManager.LoadScene(0);
     }
 }
