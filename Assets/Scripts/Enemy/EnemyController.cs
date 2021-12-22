@@ -95,5 +95,6 @@ public class EnemyController : MonoBehaviour
                 isMovingRight = true;
             }
         }
+
     }
 }

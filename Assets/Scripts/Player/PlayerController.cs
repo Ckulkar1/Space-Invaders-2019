@@ -71,5 +71,9 @@ public class PlayerController : MonoBehaviour
 
             gameObject.transform.position = Vector2.MoveTowards(currentPos, newPos, moveSpeed * Time.deltaTime);
         }
+
+
+ 
+
     }
 }

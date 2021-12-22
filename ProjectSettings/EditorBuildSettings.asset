@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Open.unity
+    guid: f951de51437924acd8f74cd4fe2a0cfc
+  - enabled: 1
     path: Assets/Scenes/SpaceInvaders.unity
     guid: 4ddb475e772d40d47b15c36466e70a08
+  - enabled: 1
+    path: Assets/Scenes/Restart.unity
+    guid: 46155e694586148daab2534bd48c19c2
   m_configObjects: {}
